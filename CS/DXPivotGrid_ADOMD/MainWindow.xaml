@@ -1,0 +1,21 @@
+﻿<Window xmlns:dxpgado="clr-namespace:DevExpress.XtraPivotGrid;assembly=DevExpress.PivotGrid.v11.2.Adomd"
+        xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="DXPivotGrid_ADOMD.MainWindow"
+        Height="400" Width="400"
+        Title="Main Window">
+    <Grid>
+        <dxpg:PivotGridControl Name="pivotGridControl1">
+            <dxpg:PivotGridControl.Fields>
+                <dxpg:PivotGridField Name="fieldQuantity" FieldName="[Measures].[Quantity]" 
+                                     Area="DataArea" Caption="Quantity"/>
+                <dxpg:PivotGridField FieldName="[Categories].[Category Name].[Category Name]" 
+                                     Name="fieldCategory" Area="RowArea" Caption="Category"/>
+                <dxpg:PivotGridField Name="fieldProduct" FieldName="[Products].[Products].[Products]"
+                                     Area="RowArea" Caption="Product"/>
+            </dxpg:PivotGridControl.Fields>
+        </dxpg:PivotGridControl>
+    </Grid>
+</Window>
