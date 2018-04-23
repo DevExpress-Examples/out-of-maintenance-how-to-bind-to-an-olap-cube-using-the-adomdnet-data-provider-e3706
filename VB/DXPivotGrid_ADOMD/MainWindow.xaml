@@ -1,0 +1,25 @@
+﻿<Window xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="DXPivotGrid_ADOMD.MainWindow"
+        Height="400" Width="400"
+        Title="Main Window">
+    <Grid>
+        <dxpg:PivotGridControl Name="pivotGridControl1" OlapDataProvider="Adomd">
+            <dxpg:PivotGridControl.OlapConnectionString>
+                Data Source=http://demos.devexpress.com/Services/OLAP/msmdpump.dll;
+                Initial Catalog=Adventure Works DW Standard Edition;
+                Cube Name=Adventure Works;
+            </dxpg:PivotGridControl.OlapConnectionString>
+            <dxpg:PivotGridControl.Fields>
+                <dxpg:PivotGridField FieldName="[Measures].[Internet Sales Amount]" 
+                                     Caption="Sales Amount" Area="DataArea"/>
+                <dxpg:PivotGridField FieldName="[Customer].[Country].[Country]"
+                                     Caption="Country" Area="RowArea"/>
+                <dxpg:PivotGridField FieldName="[Date].[Fiscal].[Fiscal Year]"
+                                     Caption="Fiscal Year" Area="ColumnArea"/>
+            </dxpg:PivotGridControl.Fields>
+        </dxpg:PivotGridControl>
+    </Grid>
+</Window>
