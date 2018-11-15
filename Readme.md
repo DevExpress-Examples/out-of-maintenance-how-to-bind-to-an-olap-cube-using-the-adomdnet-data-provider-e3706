@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/DXPivotGrid_ADOMD/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/DXPivotGrid_ADOMD/MainWindow.xaml))
+<!-- default file list end -->
 # How to: Bind to an OLAP Cube Using the ADOMD.NET Data Provider
 
 
