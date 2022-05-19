@@ -8,17 +8,26 @@
     <Grid>
         <dxpg:PivotGridControl Name="pivotGridControl1" OlapDataProvider="Adomd">
             <dxpg:PivotGridControl.OlapConnectionString>
-                Data Source=http://demos.devexpress.com/Services/OLAP/msmdpump.dll;
+                Data Source=https://demos.devexpress.com/Services/OLAP/msmdpump.dll;
                 Initial Catalog=Adventure Works DW Standard Edition;
                 Cube Name=Adventure Works;
             </dxpg:PivotGridControl.OlapConnectionString>
             <dxpg:PivotGridControl.Fields>
-                <dxpg:PivotGridField FieldName="[Measures].[Internet Sales Amount]" 
-                                     Caption="Sales Amount" Area="DataArea"/>
-                <dxpg:PivotGridField FieldName="[Customer].[Country].[Country]"
-                                     Caption="Country" Area="RowArea"/>
-                <dxpg:PivotGridField FieldName="[Date].[Fiscal].[Fiscal Year]"
-                                     Caption="Fiscal Year" Area="ColumnArea"/>
+                <dxpg:PivotGridField Caption="Sales Amount" Area="DataArea">
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="[Measures].[Internet Sales Amount]"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
+                <dxpg:PivotGridField Caption="Country" Area="RowArea">
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="[Customer].[Country].[Country]"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
+                <dxpg:PivotGridField Caption="Fiscal Year" Area="ColumnArea">
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="[Date].[Fiscal].[Fiscal Year]"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
             </dxpg:PivotGridControl.Fields>
         </dxpg:PivotGridControl>
     </Grid>
