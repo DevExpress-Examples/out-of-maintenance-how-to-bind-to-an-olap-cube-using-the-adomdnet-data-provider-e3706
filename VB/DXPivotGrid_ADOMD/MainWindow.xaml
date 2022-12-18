@@ -8,7 +8,7 @@
     <Grid>
         <dxpg:PivotGridControl Name="pivotGridControl1" OlapDataProvider="Adomd">
             <dxpg:PivotGridControl.OlapConnectionString>
-                Data Source=https://demos.devexpress.com/Services/OLAP/msmdpump.dll;
+                Data Source=http://demos.devexpress.com/Services/OLAP/msmdpump.dll;
                 Initial Catalog=Adventure Works DW Standard Edition;
                 Cube Name=Adventure Works;
             </dxpg:PivotGridControl.OlapConnectionString>

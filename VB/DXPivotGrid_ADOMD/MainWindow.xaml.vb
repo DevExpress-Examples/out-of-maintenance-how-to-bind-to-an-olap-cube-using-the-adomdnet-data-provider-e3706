@@ -1,12 +1,12 @@
-﻿Imports System.Windows
-Imports DevExpress.Xpf.PivotGrid
+Imports System.Windows
 
 Namespace DXPivotGrid_ADOMD
-	Partial Public Class MainWindow
-		Inherits Window
 
-		Public Sub New()
-			InitializeComponent()
-		End Sub
-	End Class
+    Public Partial Class MainWindow
+        Inherits Window
+
+        Public Sub New()
+            Me.InitializeComponent()
+        End Sub
+    End Class
 End Namespace
